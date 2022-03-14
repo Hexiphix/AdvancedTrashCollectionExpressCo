@@ -1,0 +1,245 @@
+*{box-sizing: border-box;}
+
+body
+{
+    font-family: "Open Sans",sans-serif, Helvetica;
+    background-color: darkgreen;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+header
+{
+    background:
+        url("silly-image.jpg");
+        background-color: darkgreen;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 40px;
+}
+header a
+{
+    transition: color 1s ease-in-out;
+    text-decoration: none;
+}
+header a:link
+{
+    color: aquamarine;
+    -webkit-text-stroke-color: black;
+}
+header a:visited
+{
+    color: aquamarine;
+    -webkit-text-stroke-color: black;
+}
+header a:hover
+{
+    color: cornflowerblue;
+    -webkit-text-stroke-color: black;
+}
+
+nav
+{
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 9999;
+    width: 100%;
+    height: auto;
+
+    text-align: left;
+    background-color: black;
+    margin: 0;
+    padding-top: 0.25em;
+    padding-left: 1em;
+    padding-bottom: 0.25em;
+}
+nav a
+{
+    padding-right: 1em;
+    transition: color 1s ease-in-out;
+    text-decoration: none;
+}
+nav a:link   {color: aquamarine;}
+nav a:visited{color: aquamarine;}
+nav a:hover  {color: cornflowerblue;}
+nav .goRight {text-align: right;}
+
+footer
+{
+    text-align: center;
+    font-size: 0.65em;
+    font-style: italic;
+    font-weight: bold;
+    background-color: gray;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+
+form
+{
+    display: flex;
+    flex-flow: column nowrap;
+}
+input, datalist, textarea{margin-bottom: .5em;}
+
+h2
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.parone
+{
+    padding-right: 5em;
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.partwo
+{
+    padding-right: 5em;
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.headhome
+{
+    height: 96vh;
+    text-align: center;
+    padding-top: 30vh;
+    background-size: auto 100%;
+    -webkit-text-stroke-width: 2px;
+}
+
+.headother
+{
+    height: 26vh;
+    text-align: center;
+    padding-top: 6vh;
+    background-size: 100% auto;
+    font-size: 0.75em;
+    -webkit-text-stroke-width: 2px;
+}
+
+#wrapper
+{
+    background-color: lime;
+    margin: 0;
+}
+
+#lineofcans
+{
+    background-image: url("trash-cans-line-up.jpg");
+    height: 26.65vw;
+    width: 40vw;
+    background-size: 100% 100%;
+}
+
+#trashdrone
+{
+    background-image: url("flying-trash.jpg");
+    height: 26.64vw;
+    width: 40vw;
+    background-size: 100% 100%;
+}
+
+#formfield
+{
+    padding: 0.75em;
+}
+
+#homegrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-left: 5vw;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+}
+#homegrid #lineofcans{grid-row: 1/2; grid-column: 1/2;}
+#homegrid .parone    {grid-row: 1/2; grid-column: 2/3;}
+#homegrid #trashdrone{grid-row: 2/3; grid-column: 2/3;}
+#homegrid .partwo    {grid-row: 2/3; grid-column: 1/2;}
+
+#busigrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-left: 5vw;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+}
+#busigrid .partwo    {grid-row: auto; grid-column: 1/2;}
+#busigrid #trashdrone{grid-row: auto; grid-column: 2/3;}
+
+@media (min-width: 600px)
+{
+    footer {font-size: 0.75em; }
+
+    .parone
+    {
+        font-size: 0.75em;
+    }
+
+    .partwo
+    {
+        font-size: 0.75em;
+    }
+
+    form
+    {
+        width: 60%;
+        max-width: 40em;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 10em 1fr;
+        grid-template-rows: auto;
+    }
+
+    input[type="submit"]
+    {
+        grid-column: 2/3;
+        width: 9em;
+    }
+}
+
+@media (min-width: 620px)
+{
+    #quickAlign
+    {
+        display: grid;
+        grid-template-columns: auto 210px;
+        grid-template-rows: auto;
+    }
+    #quickAlign .goLeft {grid-row: auto; grid-column: 1/2;}
+    #quickAlign .goRight{grid-row: auto; grid-column: 2/3;}
+}
+
+@media (min-width: 1024px)
+{
+    .parone
+    {
+        font-size: 1em;
+    }
+
+    .partwo
+    {
+        font-size: 1em;
+    }
+}
+
+@media (max-height: 500px)
+{
+    .headother
+    {
+        padding-top: 15px;
+        font-size: .55em;
+        -webkit-text-stroke-width: 1.5px;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Trash Collection Express Co :: Contact Us</title>
+    <meta name="description" content="Advanced Trash Collection Express Co contact page, the page to contact us about
+        drone based trash collection.">
+
+    <link rel="stylesheet" href="TrashStyling.css">
+</head>
+<body>
+<div id="wrapper">
+    <nav id="quickAlign">
+        <div class="goLeft">
+            <a href="index.html">Home</a>
+            <a href="business.html">Business</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+
+        <div class="goRight">
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>
+
+    <header class="headother" role="img" aria-label="Trash Drone Truck">
+        <h1><a href="index.html">Advanced Trash Collection Express Co</a></h1>
+    </header>
+
+    <main id="formfield">
+        <h2>Contact Us</h2>
+        <p>Required fields are marked with an asterisk *</p>
+
+        <form method="post" action="">
+            <label for="myName">* Name:</label>
+            <input type="text" id="myName" name="myName" required="required">
+
+            <label for="myEmail">* E-mail:</label>
+            <input type="email" id="myEmail" name="myEmail" required="required">
+
+            <label for="myReferral">How did you hear about us?</label>
+            <input type="text" id="myReferral" name="myReferral" list="myReferralList">
+            <datalist id="myReferralList">
+                <option>Online Advertisement</option>
+                <option>Social Media</option>
+                <option>Friend Referral</option>
+                <option>Business Partner</option>
+                <option>Other</option>
+            </datalist>
+
+            <label for="myRequest">* What are you contacting us about?:</label>
+            <textarea id="myRequest" name="myRequest" rows="4" cols="20" required="required"></textarea>
+
+            <input type="submit" value="Send Now">
+        </form>
+    </main>
+
+    <footer>
+        Copyright @ 2022 Advanced Trash Collection Express Co<br>
+        <a href="mailto:jmolenda2002@gmail.com">jmolenda2002@gmail.com</a>
+    </footer>
+</div>
+</body>
+</html>
